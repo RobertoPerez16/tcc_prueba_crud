@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tcc_prueba_crud';
+
+  constructor(private router: Router) {}
+
+
+  async navigateTo () {
+    await this.router.navigateByUrl('/');
+  }
 }
